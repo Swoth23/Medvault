@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+}
+
+.header {
+    width: 250px;
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    position: fixed;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.header nav {
+    position: relative;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.header nav a:hover {
+    background-color: #005266;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.dropdown {
+    display: list-item;
+    background-color: #003780f5;
+    margin-left: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 20px;
+    transition: max-height 0.1s ease-in-out;
+    -webkit-transition: max-height 0.1s ease-in-out;
+    -moz-transition: max-height 0.1s ease-in-out;
+    -ms-transition: max-height 0.1s ease-in-out;
+    -o-transition: max-height 0.1s ease-in-out;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.dropdown a {
+    padding: 10px;
+    color: white;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #a10a55;
+}
+
+.content {
+    margin-left: 250px; /* Adjust this if the header width changes */
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.content h2 {
+    font-size: 28px;
+    color: #004080;
+    margin-top: 0;
+}
+
+
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content ul li {
+    background-color: #e6f7ff;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #004080;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .header {
+        width: 200px;
+    }
+    .content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+    }
+    .header {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    .content {
+        margin-left: 0;
+        padding-top: 0;
+    }
+}

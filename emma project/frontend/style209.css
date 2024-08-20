@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    position: relative;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+header ul li a:hover {
+    background-color: #003366;
+}
+
+header ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #004080;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+header ul ul li a {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+main {
+    margin-top: 60px; /* Adjust this value if the header height changes */
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #e6f7ff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #004080;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #003366;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+#reg_stps_mm, #service_deli {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.reg_stps, .ser_dili {
+    background-color: #e6f7ff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reg_stps img, .ser_dili img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.con_us {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.con_us .words, .con_us .con_info {
+    width: 45%;
+    background-color: #e6f7ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004080;
+    color: white;
+}

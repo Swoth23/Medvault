@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Portal</title>
+    <link rel="stylesheet" href="pait.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Doctor Portal</h1>
+        <nav>
+            <div class="nav-item">
+                <h3>Dashboard</h3>
+                <a href="#profile">My Profile</a>
+                <div class="dropdown">
+                    <a href="#view-profile">View Profile</a>
+                    <a href="#edit-profile">Edit Profile</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#appointments">Appointments</a>
+                <div class="dropdown">
+                    <a href="#view-appointments">View Appointments</a>
+                    <a href="#schedule-appointment">Schedule Appointment</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#medications">Medications</a>
+                <div class="dropdown">
+                    <a href="#view-medications">View Medications</a>
+                    <a href="#add-medication">Add Medication</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#consultations">Consultations</a>
+                <div class="dropdown">
+                    <a href="#view-consultations">View Consultations</a>
+                    <a href="#new-consultation">New Consultation</a>
+                </div>
+            </div>
+            <a href="#logout">Logout</a>
+        </nav>
+    </div>
+    <div class="content">
+        <h2>Welcome, <span>Profile</span></h2>
+        <p>Your upcoming appointments:</p>
+        <ul>
+            <li>Dr. Smith - July 15, 2024</li>
+            <li>Dr. Johnson - August 3, 2024</li>
+        </ul>
+        <p>Your medications:</p>
+        <ul>
+            <li>Aspirin - 100mg</li>
+            <li>Metformin - 500mg</li>
+        </ul>
+        <p>Recent consultations:</p>
+        <ul>
+            <li>June 20, 2024 - Dr. Smith</li>
+            <li>May 15, 2024 - Dr. Johnson</li>
+        </ul>
+    </div>
+
+    <script>
+        document.querySelectorAll('.nav-item > a').forEach(item => {
+            item.addEventListener('click', function() {
+                const dropdown = this.nextElementSibling;
+                const maxHeight = dropdown.style.maxHeight;
+                document.querySelectorAll('.dropdown').forEach(dd => {
+                    dd.style.maxHeight = '09';
+                });
+                if (maxHeight === '0px' || maxHeight === '') {
+                    dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+                } else {
+                    dropdown.style.maxHeight = '0';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
